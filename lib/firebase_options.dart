@@ -21,9 +21,15 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
@@ -47,28 +53,11 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDr712EsqMCGt50VB7ePKY0lowrSV04Mro',
-    appId: '1:478209484436:web:0fc8cf3fed5678c7aa7681',
-    messagingSenderId: '478209484436',
-    projectId: 'bloc-ecommerce-app-bf3ca',
-    authDomain: 'bloc-ecommerce-app-bf3ca.firebaseapp.com',
-    storageBucket: 'bloc-ecommerce-app-bf3ca.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyC9TP2P0KxPEJ-WLPdR0SCfKxl98vEPeDE',
-    appId: '1:478209484436:android:058372386205e5f8aa7681',
-    messagingSenderId: '478209484436',
-    projectId: 'bloc-ecommerce-app-bf3ca',
-    storageBucket: 'bloc-ecommerce-app-bf3ca.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyANg5T4yLCV_7HCo52mL97ktM1S_1mXMKM',
-    appId: '1:478209484436:ios:fad1a4da67f6f03daa7681',
-    messagingSenderId: '478209484436',
-    projectId: 'bloc-ecommerce-app-bf3ca',
-    storageBucket: 'bloc-ecommerce-app-bf3ca.appspot.com',
-    iosBundleId: 'com.example.ecommerceApp',
+    apiKey: 'AIzaSyD3UUxudwq0y2bEVUlEIcveKaVTcrz3Hho',
+    appId: '1:714187813201:web:dcccd16b1e23f888036370',
+    messagingSenderId: '714187813201',
+    projectId: 'ecommerce-first-dfa52',
+    authDomain: 'ecommerce-first-dfa52.firebaseapp.com',
+    storageBucket: 'ecommerce-first-dfa52.appspot.com',
   );
 }
